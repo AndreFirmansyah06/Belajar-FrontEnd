@@ -19,6 +19,22 @@
   padding: 50px;
 }
 
+.caption {
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.artikel {
+  padding: 20px 0px;
+}
+
+.artikel p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 15px;
+}
+
 .sidebar {
   padding-top: 60px;
   left: 0;
@@ -53,6 +69,7 @@
   margin-left: 200px; /* kasih jarak biar gak ketimpa sidebar */
   padding-top: 80px; /* kasih jarak biar gak ketimpa navbar */
   padding: 20px;
+  min-width: min-content;
 }
 
 .content .judul {
@@ -66,10 +83,21 @@
 
 .gambar-lagi {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .gambar-lagi img {
-  min-width: 30%;
-  flex-wrap: wrap;
+  width: 300px;
+}
+
+footer {
+  margin-top: 60px;
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 30px 0px;
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
