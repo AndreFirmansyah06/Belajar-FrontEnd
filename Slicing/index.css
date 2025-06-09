@@ -1,3 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+}
 .grid-container {
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
@@ -8,13 +15,19 @@
 }
 
 .header {
-  grid-area: header;
-  background-color: red;
-  gap: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-end;
-  padding: 30px 0px;
+
+  background-color: olivedrab;
+  padding: 20px 30px;
+  gap: 20px;
 }
 
 .header a {
@@ -35,9 +48,13 @@ main {
 }
 
 .welcome {
-  background-color: orange;
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* atau sesuai kebutuhan */
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,12 +68,14 @@ main {
 }
 
 #hello {
+  color: white;
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
 
 #professional {
+  color: white;
   font-size: 60px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
@@ -66,7 +85,7 @@ main {
 #btn-learn {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  border: black solid 5px;
+  border: black solid 1px;
   margin: 30px;
   padding: 10px 20px;
   text-decoration: none;
@@ -79,7 +98,7 @@ main {
 }
 
 .about-wrapper {
-  background-color: orangered;
+  background-color: whitesmoke;
   height: auto;
   display: flex;
   padding: 150px 0px;
@@ -117,6 +136,7 @@ main {
 }
 
 #about-title {
+  color: black;
   padding: 0;
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
@@ -124,25 +144,33 @@ main {
 }
 
 .text p {
+  color: black;
   margin: 10px;
   font-size: medium;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn-let-us {
-  border: black 5px solid;
+  font-size: 20px;
+  border: black 1px solid;
   padding: 10px 20px;
   margin-top: auto;
   display: flex;
   justify-self: center;
   align-self: center;
+  color: black;
+}
+
+.btn-let-us:hover {
+  color: white;
+  background-color: red;
 }
 
 .trainer-wrapper {
-  background-color: orange;
+  background-color: white;
   height: auto;
   display: flex;
-  padding: 50px 0px 100px;
+  padding: 100px 0px 100px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -159,6 +187,7 @@ main {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 .title p {
@@ -166,6 +195,8 @@ main {
   font-family: "Times New Roman", Times, serif;
   padding: 10px;
   margin: 0;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .card-wrapper {
@@ -194,14 +225,132 @@ main {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.price-wrapper {
-  background-color: red;
+.form-wrapper {
+  background-image: url("https://images.unsplash.com/photo-1434682881908-b43d0467b798?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: auto;
   display: flex;
-  padding: 50px 0px 60px;
+  padding: 200px 0px 100px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.form-wrapper .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.form-wrapper .signup-form {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.input-field {
+  outline: none;
+  color: white;
+  padding-bottom: 5px;
+  border-style: none;
+  border-bottom: solid;
+  border-color: white;
+  border-width: 1px;
+  background-color: transparent;
+}
+
+.input-field::placeholder {
+  color: white;
+  font-size: 15px;
+}
+.button-send {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.send-message {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  padding: 10px 50px;
+  border: white 2px solid;
+  background-color: transparent;
+  color: white;
+}
+
+.send-message:hover {
+  background-color: red;
+}
+.fitness-blog-wrapper {
+  background-color: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0px 100px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.kotak-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.kotak {
+  background-color: #f2f2f2;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-weight: bold;
+  width: 300px;
+  height: 200px;
+}
+
+.kotak h4 {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+.kotak p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+
+.kotak .author {
+  font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .kotak-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.price-wrapper {
+  background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 100px 0px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
 }
 
 .price-wrapper .title {
@@ -234,7 +383,7 @@ main {
 
 .card-price {
   margin: 20px;
-  border: black 5px solid;
+  border: white 3px solid;
   padding-bottom: 50px;
   width: 200px;
   height: auto;
@@ -259,4 +408,92 @@ main {
 .card-price p {
   font-size: 15px;
   font-weight: normal;
+}
+
+.quotes-wrapper {
+  background-color: whitesmoke;
+  height: auto;
+  padding: 50px 0px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icon {
+  margin: 0;
+}
+
+.icon p {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.quotes p {
+  margin: 0;
+  padding: 0px 100px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.quotes .author {
+  padding: 10px;
+  font-size: 20px;
+  color: grey;
+  text-align: center;
+  font-weight: normal;
+}
+
+.footer-wrapper {
+  background-color: olivedrab;
+  height: auto;
+  padding: 50px 0px 60px;
+  flex-wrap: wrap;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-container .about-fitness,
+.session,
+.follow-us {
+  padding: 5px 30px;
+  width: 300px;
+  height: fit-content;
+}
+
+.footer-container h3 {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.copyright {
+  display: flex;
+  background-color: olivedrab;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 20px;
 }
