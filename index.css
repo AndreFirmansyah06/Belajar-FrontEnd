@@ -4,6 +4,8 @@ html {
 
 body {
   background-color: white;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .grid-container {
   grid-template-columns: auto auto auto;
@@ -33,12 +35,12 @@ body {
 .header a {
   gap: 10px;
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: white;
 }
 
 .header a:hover {
+  cursor: pointer;
   padding: 0px 10px;
   background-color: red;
 }
@@ -109,14 +111,12 @@ main {
 #professional {
   color: white;
   font-size: 60px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
   margin: 0;
 }
 
 #btn-learn {
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   border: black solid 1px;
   margin: 30px;
   padding: 10px 20px;
@@ -125,6 +125,7 @@ main {
 }
 
 #btn-learn:hover {
+  cursor: pointer;
   background-color: red;
   color: white;
 }
@@ -171,7 +172,6 @@ main {
   color: black;
   padding: 0;
   font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
 }
 
@@ -179,7 +179,6 @@ main {
   color: black;
   margin: 10px;
   font-size: medium;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn-let-us {
@@ -194,6 +193,7 @@ main {
 }
 
 .btn-let-us:hover {
+  cursor: pointer;
   color: white;
   background-color: red;
 }
@@ -216,7 +216,6 @@ main {
 
 .title h2 {
   font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -254,7 +253,6 @@ main {
 .card-trainer .caption {
   text-align: center;
   font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-wrapper {
@@ -310,7 +308,6 @@ main {
 
 .send-message {
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   padding: 10px 50px;
   border: white 2px solid;
@@ -319,6 +316,7 @@ main {
 }
 
 .send-message:hover {
+  cursor: pointer;
   background-color: red;
 }
 .fitness-blog-wrapper {
@@ -350,13 +348,11 @@ main {
 
 .kotak h4 {
   font-size: 10px;
-  font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
 }
 
 .kotak p {
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   text-transform: capitalize;
 }
 
@@ -393,7 +389,6 @@ main {
 
 .title h2 {
   font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -420,7 +415,6 @@ main {
   width: 200px;
   height: auto;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card-price .title {
@@ -460,7 +454,6 @@ main {
   text-align: center;
   font-size: 50px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -468,7 +461,6 @@ main {
   margin: 0;
   padding: 0px 100px;
   font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
@@ -503,12 +495,10 @@ main {
 
 .footer-container h3 {
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-container p {
   font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 @media (max-width: 768px) {
   .footer-container {
@@ -525,7 +515,6 @@ main {
   justify-content: center;
   align-items: flex-end;
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 20px;
 }
