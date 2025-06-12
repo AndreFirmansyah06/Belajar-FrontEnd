@@ -15,14 +15,21 @@ body {
     "main main main"
     "footer footer footer";
 }
-
-.header {
+header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
 
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+padding: 10px;
+  background-color: olivedrab;
+  gap: 20px;
+}
+
+.header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -30,6 +37,10 @@ body {
   background-color: olivedrab;
   padding: 20px 30px;
   gap: 20px;
+}
+
+.header li {
+  list-style-type: none;
 }
 
 .header a {
@@ -42,39 +53,46 @@ body {
 .header a:hover {
   cursor: pointer;
   padding: 0px 10px;
-  background-color: red;
 }
 
 .logo {
-  margin-left: 10px;
-  margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+.logo a{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+.responsive-navbar {
+  height: fit-content;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  background-color: olivedrab;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+}
 
-    background-color: olivedrab;
-    padding: 20px 30px;
-    gap: 20px;
-  }
+.show {
+  display: flex;
+}
 
-  main {
-    padding-top: 300px;
-  }
+.responsive-navbar li {
+  padding: 20px;
+  list-style-type: none;
+}
 
-  .header a {
-    text-decoration: underline;
-  }
+.responsive-navbar a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
 }
 
 main {
@@ -134,7 +152,7 @@ main {
   background-color: whitesmoke;
   height: auto;
   display: flex;
-  padding: 150px 0px;
+  padding: 200px 0px;
   justify-content: center;
   align-items: center;
 }
@@ -202,7 +220,7 @@ main {
   background-color: white;
   height: auto;
   display: flex;
-  padding: 100px 0px 100px;
+  padding: 200px 0px 100px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -263,7 +281,7 @@ main {
   background-repeat: no-repeat;
   height: auto;
   display: flex;
-  padding: 200px 0px 100px;
+  padding: 400px 0px 100px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -324,7 +342,7 @@ main {
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 100px 0px 100px;
+  padding: 200px 0px 100px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -373,7 +391,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   height: auto;
-  padding: 100px 0px 60px;
+  padding: 200px 0px 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -439,7 +457,7 @@ main {
 .quotes-wrapper {
   background-color: whitesmoke;
   height: auto;
-  padding: 50px 0px 60px;
+  padding: 200px 0px 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -506,6 +524,10 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  .hideOnMobile {
+    display: none;
   }
 }
 

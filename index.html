@@ -9,17 +9,42 @@
   <body>
     <div class="grid-container">
       <header>
-        <div class="header">
-          <div class="logo">
-            <a href="#home" id="logo">Fitness</a>
-          </div>
-          <a href="#about">About</a>
-          <a href="#trainers">Trainers</a>
-          <a href="#blog">Blog</a>
-          <a href="#prices">Prices</a>
-          <a href="#quotes">Quotes</a>
-          <a href="#signup">Sign Up</a>
+        <div class="logo">
+          <a href="#home" id="logo">Fitness</a>
         </div>
+        <nav>
+          <ul class="header">
+            <li><a href="#about" class="hideOnMobile">About</a></li>
+            <li><a href="#trainers" class="hideOnMobile">Trainers</a></li>
+            <li><a href="#blog" class="hideOnMobile">Blog</a></li>
+            <li><a href="#prices" class="hideOnMobile">Prices</a></li>
+            <li><a href="#quotes" class="hideOnMobile">Quotes</a></li>
+            <li><a href="#signup" class="hideOnMobile">Sign Up</a></li>
+            <li onclick="toggleMenu()" class="show">
+              <a href="javascript:void(0)"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#e3e3e3"
+                  id="show"
+                >
+                  <path
+                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                  /></svg
+              ></a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="responsive-navbar" id="responsive-navbar">
+          <li><a href="#about" onclick="hideMenu()">About</a></li>
+          <li><a href="#trainers" onclick="hideMenu()">Trainers</a></li>
+          <li><a href="#blog" onclick="hideMenu()">Blog</a></li>
+          <li><a href="#prices" onclick="hideMenu()">Prices</a></li>
+          <li><a href="#quotes" onclick="hideMenu()">Quotes</a></li>
+          <li><a href="#signup" onclick="hideMenu()">Sign Up</a></li>
+        </ul>
       </header>
       <main>
         <div class="welcome" id="home">
@@ -263,5 +288,18 @@
         <div class="copyright">Copyright @ 2025 Fitness</div>
       </footer>
     </div>
+
+    <script>
+      function toggleMenu() {
+        <!-- event.preventDefault(); // hindari reload atau blink -->
+        const nav = document.getElementById("responsive-navbar");
+        nav.classList.toggle("show");
+      }
+
+      function hideMenu() {
+        const nav = document.getElementById("responsive-navbar");
+        nav.classList.remove("show");
+      }
+    </script>
   </body>
 </html>
