@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="icon" type="image/png" href="icon/fitness-icon.png">
+    <link rel="icon" type="image/png" href="icon/fitness-icon.png" />
     <title>Fitness</title>
   </head>
   <body>
@@ -39,6 +39,21 @@
           </ul>
         </nav>
         <ul class="responsive-navbar" id="responsive-navbar">
+          <li onclick="hideMenu()" class="show">
+            <a href="javascript:void(0)"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+                id="show"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                /></svg
+            ></a>
+          </li>
           <li><a href="#about" onclick="hideMenu()">About</a></li>
           <li><a href="#trainers" onclick="hideMenu()">Trainers</a></li>
           <li><a href="#blog" onclick="hideMenu()">Blog</a></li>
@@ -90,7 +105,7 @@
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             </div>
             <div class="card-wrapper">
-              <div class="card-trainer">
+              <div class="card-trainer" onclick="popCard(this)">
                 <div class="trainer-img">
                   <img
                     src="https://previews.123rf.com/images/vgstudio/vgstudio1905/vgstudio190500002/122167498-man-portrait-young-happy-man-with-smiling-face-male-model-in-crossed-arms-pose-grey-background-guy-i.jpg"
@@ -105,7 +120,7 @@
                   </p>
                 </div>
               </div>
-              <div class="card-trainer">
+              <div class="card-trainer" onclick="popCard(this)">
                 <div class="trainer-img">
                   <img
                     src="https://previews.123rf.com/images/vgstudio/vgstudio1905/vgstudio190500002/122167498-man-portrait-young-happy-man-with-smiling-face-male-model-in-crossed-arms-pose-grey-background-guy-i.jpg"
@@ -120,7 +135,7 @@
                   </p>
                 </div>
               </div>
-              <div class="card-trainer">
+              <div class="card-trainer" onclick="popCard(this)">
                 <div class="trainer-img">
                   <img
                     src="https://previews.123rf.com/images/vgstudio/vgstudio1905/vgstudio190500002/122167498-man-portrait-young-happy-man-with-smiling-face-male-model-in-crossed-arms-pose-grey-background-guy-i.jpg"
@@ -135,7 +150,7 @@
                   </p>
                 </div>
               </div>
-              <div class="card-trainer">
+              <div class="card-trainer" onclick="popCard(this)">
                 <div class="trainer-img">
                   <img
                     src="https://previews.123rf.com/images/vgstudio/vgstudio1905/vgstudio190500002/122167498-man-portrait-young-happy-man-with-smiling-face-male-model-in-crossed-arms-pose-grey-background-guy-i.jpg"
@@ -300,6 +315,21 @@
       function hideMenu() {
         const nav = document.getElementById("responsive-navbar");
         nav.classList.remove("show");
+      }
+
+      let activeCard = null;
+
+      function popCard(card) {
+        // Jika ada kartu yang aktif dan itu bukan kartu yang baru diklik
+        if (activeCard && activeCard !== card) {
+          activeCard.classList.remove("active"); // reset kartu sebelumnya
+        }
+
+        // Toggle kartu yang diklik
+        card.classList.toggle("active");
+
+        // Update kartu aktif jika diklik-nya aktifkan
+        activeCard = card.classList.contains("active") ? card : null;
       }
     </script>
   </body>
